@@ -1,0 +1,14 @@
+# Ignore artifacts:
+build
+_infra
+node_modules
+coverage
+.storybook
+.github
+_infra
+# __mocks__
+storybook-static
+temp
+
+# Ignore all generated API clients:
+src/vendor/**

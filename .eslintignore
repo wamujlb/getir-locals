@@ -1,0 +1,7 @@
+# Ignore artifacts:
+build/*
+_infra
+
+# Ignore all generated API clients:
+src/vendor
+cypress/*
