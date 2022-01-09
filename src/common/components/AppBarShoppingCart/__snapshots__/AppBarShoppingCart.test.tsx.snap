@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#AppBarShoppingCart should match snapshot when price is 0 1`] = `
+<div>
+  <button
+    class="makeStyles-root-1 MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButtonBase-root  css-s42839-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3.9,7.8h16.2V22H3.9V7.8z M9.1,1.9h5.8L16,3.1v4.7l-1.2,0V3.1H9.2v4.7L8,7.8V3.1L9.1,1.9z"
+        />
+      </svg>
+    </span>
+    ₺ 0.00
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`#AppBarShoppingCart should match snapshot when price is not 0 1`] = `
+<div>
+  <button
+    class="makeStyles-root-2 MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-disableElevation MuiButtonBase-root  css-s42839-MuiButtonBase-root-MuiButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3.9,7.8h16.2V22H3.9V7.8z M9.1,1.9h5.8L16,3.1v4.7l-1.2,0V3.1H9.2v4.7L8,7.8V3.1L9.1,1.9z"
+        />
+      </svg>
+    </span>
+    ₺ 123,112.00
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
