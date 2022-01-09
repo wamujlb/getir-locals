@@ -3,6 +3,6 @@ import { ThemeProvider } from '@mui/styles';
 
 import { theme } from 'theme/theme';
 
-export const WrappedByTheme = ({ children }: any) => {
+export const WrappedWithTheme = ({ children }: any) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };

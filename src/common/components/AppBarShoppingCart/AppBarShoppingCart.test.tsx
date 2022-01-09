@@ -2,7 +2,7 @@ import React from 'react';
 import { cleanup, render } from '@testing-library/react';
 
 import AppBarShoppingCart from './AppBarShoppingCart';
-import { WrappedByTheme } from 'test-helpers';
+import { WrappedWithTheme } from 'test-helpers';
 
 describe('#AppBarShoppingCart', () => {
   afterEach(() => {
@@ -11,9 +11,9 @@ describe('#AppBarShoppingCart', () => {
 
   it('should match snapshot when price is 0', () => {
     const screen = render(
-      <WrappedByTheme>
+      <WrappedWithTheme>
         <AppBarShoppingCart value={0} />
-      </WrappedByTheme>
+      </WrappedWithTheme>
     );
 
     expect(screen.container).toMatchSnapshot();
@@ -21,9 +21,9 @@ describe('#AppBarShoppingCart', () => {
 
   it('should match snapshot when price is not 0', () => {
     const screen = render(
-      <WrappedByTheme>
+      <WrappedWithTheme>
         <AppBarShoppingCart value={123112} />
-      </WrappedByTheme>
+      </WrappedWithTheme>
     );
 
     expect(screen.container).toMatchSnapshot();
