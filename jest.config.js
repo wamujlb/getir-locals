@@ -1,7 +1,7 @@
 process.env.TZ = 'UTC';
 
 module.exports = {
-  testEnvironment: 'jest-environment-jsdom-sixteen',
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['./src/setupTests.ts'],
   transform: {
     '.(ts|tsx)': 'ts-jest',
@@ -10,6 +10,7 @@ module.exports = {
   moduleNameMapper: {
     '^api(.*)$': '<rootDir>/src/api$1',
     '^common(.*)$': '<rootDir>/src/common$1',
+    '^theme(.*)$': '<rootDir>/src/theme$1',
     '^routes(.*)$': '<rootDir>/src/routes$1',
     '^app(.*)$': '<rootDir>/src/app$1',
     '^features(.*)$': '<rootDir>/src/features$1',
