@@ -12,7 +12,7 @@ module.exports = {
     '^common(.*)$': '<rootDir>/src/common$1',
     '^theme(.*)$': '<rootDir>/src/theme$1',
     '^routes(.*)$': '<rootDir>/src/routes$1',
-    '^app(.*)$': '<rootDir>/src/app$1',
+    '^App(.*)$': '<rootDir>/src/App$1',
     '^features(.*)$': '<rootDir>/src/features$1',
     '^test-helpers(.*)$': '<rootDir>/src/test-helpers$1',
   },

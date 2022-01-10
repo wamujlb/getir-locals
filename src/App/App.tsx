@@ -1,5 +1,6 @@
 import React from 'react';
 import { create } from 'jss';
+import { Provider } from 'react-redux';
 import {
   CssBaseline,
   StyledEngineProvider,
@@ -9,6 +10,7 @@ import { jssPreset, StylesProvider } from '@mui/styles';
 
 import { theme } from '../theme/theme';
 import HomePage from 'routes/HomePage/HomePage';
+import store from './state/store';
 
 const jss = create({
   plugins: [...jssPreset().plugins],
@@ -16,15 +18,17 @@ const jss = create({
 
 const App = () => {
   return (
-    <StyledEngineProvider injectFirst>
-      <StylesProvider jss={jss}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+    <Provider store={store}>
+      <StyledEngineProvider injectFirst>
+        <StylesProvider jss={jss}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
 
-          <HomePage />
-        </ThemeProvider>
-      </StylesProvider>
-    </StyledEngineProvider>
+            <HomePage />
+          </ThemeProvider>
+        </StylesProvider>
+      </StyledEngineProvider>
+    </Provider>
   );
 };
 

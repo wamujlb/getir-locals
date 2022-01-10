@@ -1,44 +1,51 @@
 import React, { useCallback } from 'react';
 import { Form, Formik } from 'formik';
+import { useSelector } from 'react-redux';
+import { Typography } from '@mui/material';
 
 import ShoppingCartCard from 'common/components/ShoppingCart/ShoppingCartCard/ShoppingCartCard';
 import ShoppingCartItem from 'common/components/ShoppingCart/ShoppingCartItem/ShoppingCartItem';
 import { useShoppingCartForm } from './hooks/useShoppingCardForm';
+import {
+  selectShoppingCartItemsList,
+  selectShoppingCartTotalPrice,
+  updateItemCount,
+} from './shoppingCart.slice';
+import { useAppDispatch } from 'App/state/useAppDispatch';
 
 const ShoppingCart = () => {
   const { initialValues, onSubmit } = useShoppingCartForm();
+  const dispatch = useAppDispatch();
+  const items = useSelector(selectShoppingCartItemsList);
+  const totalPrice = useSelector(selectShoppingCartTotalPrice);
+
+  const handleCountChange = useCallback(
+    (id: string, newCount: number) => {
+      dispatch(updateItemCount({ id, newCount }));
+    },
+    [dispatch]
+  );
 
   return (
-    <ShoppingCartCard totalPrice={12321} variant="outlined">
-      <Formik initialValues={initialValues} onSubmit={onSubmit}>
+    <ShoppingCartCard totalPrice={totalPrice} variant="outlined">
+      {/* <Formik initialValues={initialValues} onSubmit={onSubmit}>
         {() => (
-          <Form>
-            <ShoppingCartItem
-              id="id_1"
-              name="items.id_1"
-              title="Example Product"
-              price={14.99}
-              imageUri=""
-            />
+          <Form> */}
+      {items.length === 0 && (
+        <Typography textAlign="center">No items</Typography>
+      )}
 
-            <ShoppingCartItem
-              id="id_2"
-              name="items.id_2"
-              title="Example Product"
-              price={14.99}
-              imageUri=""
-            />
-
-            <ShoppingCartItem
-              id="id_3"
-              name="items.id_3"
-              title="Example Product"
-              price={14.99}
-              imageUri=""
-            />
-          </Form>
+      {items.map(({ id, ...rest }) => (
+        <ShoppingCartItem
+          key={id}
+          id={id}
+          onCountChange={handleCountChange}
+          {...rest}
+        />
+      ))}
+      {/* </Form>
         )}
-      </Formik>
+      </Formik> */}
     </ShoppingCartCard>
   );
 };
