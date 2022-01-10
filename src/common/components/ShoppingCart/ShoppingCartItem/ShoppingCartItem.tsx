@@ -1,20 +1,21 @@
 import React from 'react';
 
-import { ProductItemData } from 'features/ProductResults/ProductResults.interface';
 import { ListItem, ListItemText, Typography } from '@mui/material';
 import { usePrice } from 'common/hooks/usePrice';
-import CounterField from 'common/components/FormFields/CounterField/CounterField';
+import CounterInput from 'common/components/FormFields/CounterInput/CounterInput';
+import { ShoppingCartItemData } from 'features/ShoppingCart/shoppingCart.slice';
 import { useStyles } from './style';
 
 export type ShoppingCartItemProps = {
-  name: string;
-} & ProductItemData;
+  onCountChange: (name: string, value: number) => void;
+} & ShoppingCartItemData;
 
 const ShoppingCartItem = ({
   id,
-  name,
   price,
   title,
+  count,
+  onCountChange,
 }: ShoppingCartItemProps) => {
   const classes = useStyles();
   const formattedPrice = usePrice({ value: price });
@@ -34,7 +35,7 @@ const ShoppingCartItem = ({
         }}
       />
 
-      <CounterField name={name} />
+      <CounterInput name={id} initValue={count} onChange={onCountChange} />
     </ListItem>
   );
 };

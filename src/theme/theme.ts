@@ -47,6 +47,15 @@ theme.components = {
       sizeSmall: {
         padding: theme.spacing(0, 1.5),
       },
+      outlined: {
+        borderWidth: 2,
+        '&:hover': {
+          borderWidth: 2,
+        },
+      },
+      outlinedPrimary: {
+        borderColor: theme.palette.primary.main,
+      },
     },
   },
 };
