@@ -21,6 +21,9 @@ export const theme = createTheme({
     background: {
       default: '#FAFAFA',
     },
+    text: {
+      secondary: '#697488',
+    },
   },
   typography: {
     fontFamily: ['Open Sans', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(

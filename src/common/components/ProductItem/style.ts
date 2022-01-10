@@ -9,12 +9,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       },
     },
     title: {
-      color: '#697488',
+      color: theme.palette.text.secondary,
       marginBottom: theme.spacing(1.5),
       fontWeight: theme.typography.fontWeightMedium,
     },
     price: {
-      color: '#697488',
+      color: theme.palette.text.secondary,
       marginBottom: theme.spacing(1.5),
       fontWeight: theme.typography.fontWeightMedium,
     },
