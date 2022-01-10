@@ -9,14 +9,31 @@ import ProductImage from '../ProductImage/ProductImage';
 
 export type ProductItemProps = {
   addedToCart?: boolean;
-  onAddToCart?: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
+  onAddToCart: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onRemoveFromCart: (e: React.MouseEvent<HTMLButtonElement>) => void;
 } & ProductItemData &
   CardProps;
 
 const ProductItem = React.memo(
-  ({ title, price, addedToCart, imageUri, onAddToCart }: ProductItemProps) => {
+  ({
+    title,
+    price,
+    addedToCart,
+    imageUri,
+    onAddToCart,
+    onRemoveFromCart,
+  }: ProductItemProps) => {
     const classes = useStyles();
     const formattedPrice = usePrice({ value: price });
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (addedToCart) {
+        onRemoveFromCart(e);
+        return;
+      }
+
+      onAddToCart(e);
+    };
 
     return (
       <Card className={classes.root}>
@@ -39,7 +56,7 @@ const ProductItem = React.memo(
           size="small"
           color="primary"
           variant={addedToCart ? 'outlined' : 'contained'}
-          onClick={onAddToCart}
+          onClick={handleClick}
         >
           {addedToCart ? 'Remove' : 'Add'}
         </FetchButton>
