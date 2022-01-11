@@ -5,25 +5,27 @@ exports[`#ProductItem should match the snapshot when product is added to the car
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-6 css-bhp9pd-MuiPaper-root-MuiCard-root"
   >
-    <div
-      class="makeStyles-root-9"
-    >
-      <img
-        alt="title"
-        class="makeStyles-image-10"
-        src="https://picsum.photos/300"
-      />
+    <div>
+      <div
+        class="makeStyles-root-9"
+      >
+        <img
+          alt="title"
+          class="makeStyles-image-10"
+          src="https://picsum.photos/300"
+        />
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-kl203v-MuiTypography-root"
+      >
+        ₺ 14.99
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-clx6gs-MuiTypography-root"
+      >
+        Gorgeous Office Mug
+      </p>
     </div>
-    <p
-      class="MuiTypography-root MuiTypography-body2 css-kl203v-MuiTypography-root"
-    >
-      ₺ 14.99
-    </p>
-    <p
-      class="MuiTypography-root MuiTypography-body2 css-clx6gs-MuiTypography-root"
-    >
-      Gorgeous Office Mug
-    </p>
     <button
       class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-fullWidth MuiButtonBase-root  css-1jb5gvc-MuiButtonBase-root-MuiButton-root"
       tabindex="0"
@@ -43,25 +45,27 @@ exports[`#ProductItem should match the snapshot when product not added to the ca
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-root-1 css-bhp9pd-MuiPaper-root-MuiCard-root"
   >
-    <div
-      class="makeStyles-root-4"
-    >
-      <img
-        alt="title"
-        class="makeStyles-image-5"
-        src="https://picsum.photos/300"
-      />
+    <div>
+      <div
+        class="makeStyles-root-4"
+      >
+        <img
+          alt="title"
+          class="makeStyles-image-5"
+          src="https://picsum.photos/300"
+        />
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-kl203v-MuiTypography-root"
+      >
+        ₺ 14.99
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-clx6gs-MuiTypography-root"
+      >
+        Gorgeous Office Mug
+      </p>
     </div>
-    <p
-      class="MuiTypography-root MuiTypography-body2 css-kl203v-MuiTypography-root"
-    >
-      ₺ 14.99
-    </p>
-    <p
-      class="MuiTypography-root MuiTypography-body2 css-clx6gs-MuiTypography-root"
-    >
-      Gorgeous Office Mug
-    </p>
     <button
       class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-fullWidth MuiButtonBase-root  css-1evprfk-MuiButtonBase-root-MuiButton-root"
       tabindex="0"

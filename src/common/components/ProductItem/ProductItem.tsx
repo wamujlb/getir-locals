@@ -37,19 +37,21 @@ const ProductItem = React.memo(
 
     return (
       <Card className={classes.root}>
-        <ProductImage productTitle="title" src={imageUri} />
+        <div>
+          <ProductImage productTitle="title" src={imageUri} />
 
-        <Typography
-          variant="body2"
-          fontWeight="bold"
-          sx={{ color: 'primary.main', mt: 1 }}
-        >
-          {formattedPrice}
-        </Typography>
+          <Typography
+            variant="body2"
+            fontWeight="bold"
+            sx={{ color: 'primary.main', mt: 1 }}
+          >
+            {formattedPrice}
+          </Typography>
 
-        <Typography variant="body2" sx={{ color: 'text.primary', mb: 0.5 }}>
-          {title}
-        </Typography>
+          <Typography variant="body2" sx={{ color: 'text.primary', mb: 0.5 }}>
+            {title}
+          </Typography>
+        </div>
 
         <FetchButton
           fullWidth
