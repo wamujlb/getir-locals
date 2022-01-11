@@ -1,5 +1,5 @@
 import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from 'App/state/store';
+import { RootState } from 'store/configureStore';
 import { ProductItemData } from 'features/ProductResults/ProductResults.interface';
 
 export type ShoppingCartItemData = {

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import AppLogo from 'common/components/AppLogo/AppLogo';
 import AppBarShoppingCart from 'common/components/AppBarShoppingCart/AppBarShoppingCart';
 import { useElevationScroll } from 'common/hooks/useElevationScroll';
-import { selectShoppingCartTotalPrice } from 'features/ShoppingCart/shoppingCart.slice';
+import { selectShoppingCartTotalPrice } from 'store/ducks/shoppingCart/shoppingCart.slice';
 import { useStyles } from './style';
 
 const MainAppBar = () => {

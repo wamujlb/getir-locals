@@ -10,7 +10,7 @@ import { jssPreset, StylesProvider } from '@mui/styles';
 
 import { theme } from '../theme/theme';
 import HomePage from 'routes/HomePage/HomePage';
-import store from './state/store';
+import store from '../store/configureStore';
 
 const jss = create({
   plugins: [...jssPreset().plugins],

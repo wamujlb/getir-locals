@@ -10,6 +10,7 @@ module.exports = {
   moduleNameMapper: {
     '^api(.*)$': '<rootDir>/src/api$1',
     '^common(.*)$': '<rootDir>/src/common$1',
+    '^store(.*)$': '<rootDir>/src/store$1',
     '^theme(.*)$': '<rootDir>/src/theme$1',
     '^routes(.*)$': '<rootDir>/src/routes$1',
     '^App(.*)$': '<rootDir>/src/App$1',

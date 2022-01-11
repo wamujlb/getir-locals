@@ -1,4 +1,4 @@
-import { createStore } from 'App/state/store';
+import { createStore } from 'store/configureStore';
 import {
   productItemDataMock,
   productItemDataMock_2,

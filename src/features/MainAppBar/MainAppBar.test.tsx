@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 
 import MainAppBar from './MainAppBar';
 import {
@@ -8,7 +7,7 @@ import {
   WrappedWithReduxProps,
   WrappedWithTheme,
 } from 'test-helpers';
-import { createStore } from 'App/state/store';
+import { createStore } from 'store/configureStore';
 import { productItemDataMock } from 'features/ProductResults/__mocks__/productItem.mock';
 
 const TestComponent = ({ store }: WrappedWithReduxProps) => {

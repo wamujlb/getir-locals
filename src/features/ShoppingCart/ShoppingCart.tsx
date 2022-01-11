@@ -10,8 +10,8 @@ import {
   selectShoppingCartItemsList,
   selectShoppingCartTotalPrice,
   updateItemCount,
-} from './shoppingCart.slice';
-import { useAppDispatch } from 'App/state/useAppDispatch';
+} from 'store/ducks/shoppingCart/shoppingCart.slice';
+import { useAppDispatch } from 'store/useAppDispatch';
 
 const ShoppingCart = () => {
   const { initialValues, onSubmit } = useShoppingCartForm();
