@@ -1,11 +1,11 @@
 import React from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBackRounded';
-import { Typography } from '@mui/material';
+import { Hidden, Typography } from '@mui/material';
 
 const PaginationPrev = () => {
   return (
     <Typography sx={{ display: 'flex', alignItems: 'center' }}>
-      <ArrowBackIcon /> Prev
+      <ArrowBackIcon /> <Hidden lgDown>Prev</Hidden>
     </Typography>
   );
 };

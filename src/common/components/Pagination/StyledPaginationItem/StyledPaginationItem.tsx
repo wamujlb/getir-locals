@@ -8,11 +8,13 @@ const StyledPaginationItem = styled(PaginationItem)<PaginationItemProps>(
       height: 40,
     },
     '&.MuiPaginationItem-previousNext': {
-      '&:first-child': {
-        marginRight: theme.spacing(4),
-      },
-      '&:last-child': {
-        marginLeft: theme.spacing(4),
+      [theme.breakpoints.up('lg')]: {
+        '&:first-of-type': {
+          marginRight: theme.spacing(4),
+        },
+        '&:last-of-type': {
+          marginLeft: theme.spacing(4),
+        },
       },
     },
   })
