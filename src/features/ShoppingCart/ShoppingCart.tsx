@@ -1,11 +1,9 @@
 import React, { useCallback } from 'react';
-import { Form, Formik } from 'formik';
 import { useSelector } from 'react-redux';
 import { Typography } from '@mui/material';
 
 import ShoppingCartCard from 'common/components/ShoppingCart/ShoppingCartCard/ShoppingCartCard';
 import ShoppingCartItem from 'common/components/ShoppingCart/ShoppingCartItem/ShoppingCartItem';
-import { useShoppingCartForm } from './hooks/useShoppingCardForm';
 import {
   selectShoppingCartItemsList,
   selectShoppingCartTotalPrice,
@@ -14,7 +12,6 @@ import {
 import { useAppDispatch } from 'store/useAppDispatch';
 
 const ShoppingCart = () => {
-  const { initialValues, onSubmit } = useShoppingCartForm();
   const dispatch = useAppDispatch();
   const items = useSelector(selectShoppingCartItemsList);
   const totalPrice = useSelector(selectShoppingCartTotalPrice);
@@ -28,9 +25,6 @@ const ShoppingCart = () => {
 
   return (
     <ShoppingCartCard totalPrice={totalPrice} variant="outlined">
-      {/* <Formik initialValues={initialValues} onSubmit={onSubmit}>
-        {() => (
-          <Form> */}
       {items.length === 0 && (
         <Typography textAlign="center">No items</Typography>
       )}
@@ -43,9 +37,6 @@ const ShoppingCart = () => {
           {...rest}
         />
       ))}
-      {/* </Form>
-        )}
-      </Formik> */}
     </ShoppingCartCard>
   );
 };
