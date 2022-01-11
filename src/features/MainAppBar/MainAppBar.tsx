@@ -1,15 +1,20 @@
 import React from 'react';
 import { AppBar, Container, Grid } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 import AppLogo from 'common/components/AppLogo/AppLogo';
-import { useStyles } from './style';
 import AppBarShoppingCart from 'common/components/AppBarShoppingCart/AppBarShoppingCart';
+import { useElevationScroll } from 'common/hooks/useElevationScroll';
+import { selectShoppingCartTotalPrice } from 'features/ShoppingCart/shoppingCart.slice';
+import { useStyles } from './style';
 
 const MainAppBar = () => {
   const classes = useStyles();
+  const elevation = useElevationScroll();
+  const totalPrice = useSelector(selectShoppingCartTotalPrice);
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" elevation={elevation}>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid
@@ -26,7 +31,7 @@ const MainAppBar = () => {
           </Grid>
 
           <Grid item xs={8} md={3} className={classes.toolbarRight}>
-            <AppBarShoppingCart value={112123.1154} />
+            <AppBarShoppingCart value={totalPrice} />
           </Grid>
         </Grid>
       </Container>
