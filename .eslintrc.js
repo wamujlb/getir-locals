@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'react-app',
+    'react-app/jest',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
   ],
@@ -56,6 +57,14 @@ module.exports = {
       files: ['**/*.slice.ts'],
       rules: {
         'no-param-reassign': 'off',
+      },
+    },
+    {
+      files: ['**/*.stories.*'],
+      rules: {
+        'import/no-anonymous-default-export': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'react/no-unescaped-entities': ['off', {}],
       },
     },
   ],
