@@ -1,8 +1,8 @@
 import React from 'react';
+import { ListItem, ListItemText } from '@mui/material';
 
-import { ListItem, ListItemText, Typography } from '@mui/material';
 import { usePrice } from 'common/hooks/usePrice';
-import CounterInput from 'common/components/FormFields/CounterInput/CounterInput';
+import Counter from 'common/components/FormFields/Counter/Counter';
 import { ShoppingCartItemData } from 'store/ducks/shoppingCart/shoppingCart.slice';
 import { useStyles } from './style';
 
@@ -35,7 +35,7 @@ const ShoppingCartItem = ({
         }}
       />
 
-      <CounterInput name={id} initValue={count} onChange={onCountChange} />
+      <Counter name={id} initValue={count} onChange={onCountChange} />
     </ListItem>
   );
 };
