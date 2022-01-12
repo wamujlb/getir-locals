@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#ShoppingCart should match the snapshot when shopping cart is empty 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded makeStyles-root-1 MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiBox-root css-19midj6"
+    >
+      <ul
+        class="MuiList-root css-1mk9mw3-MuiList-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1uwgr7b-MuiTypography-root"
+        >
+          No items
+        </p>
+      </ul>
+      <div
+        class="MuiBox-root css-x85yq3"
+      >
+        <button
+          class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1mk3q3f-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ₺ 0.00
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`#ShoppingCart should show 1 item in the cart 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded makeStyles-root-2 MuiCard-root css-1v5z4dq-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiBox-root css-19midj6"
+    >
+      <ul
+        class="MuiList-root css-1mk9mw3-MuiList-root"
+      >
+        <li
+          class="makeStyles-root-3 MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-h8lxwn-MuiListItem-root"
+        >
+          <div
+            class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-primary css-et1ao3-MuiTypography-root"
+              title="Gorgeous Office Mug"
+            >
+              Gorgeous Office Mug
+            </span>
+            <p
+              class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-xomozu-MuiTypography-root"
+            >
+              ₺ 10.50
+            </p>
+          </div>
+          <div
+            class="MuiFormControl-root makeStyles-root-5 css-1nrlq1o-MuiFormControl-root"
+          >
+            <button
+              aria-label="Decrease count"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-2rshpx-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="RemoveRoundedIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 13H6c-.55 0-1-.45-1-1s.45-1 1-1h12c.55 0 1 .45 1 1s-.45 1-1 1z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <input
+              class="makeStyles-input-6"
+              name="a"
+              readonly=""
+              type="number"
+              value="1"
+            />
+            <button
+              aria-label="Increase count"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-2rshpx-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                data-testid="AddRoundedIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="MuiBox-root css-x85yq3"
+      >
+        <button
+          class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1mk3q3f-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ₺ 10.50
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -28,9 +28,9 @@ describe('#MainAppBar', () => {
   it('should match the snapshot when there are no items in shopping cart', async () => {
     const store = createStore();
 
-    const screen = render(<TestComponent store={store} />);
+    const view = render(<TestComponent store={store} />);
 
-    expect(screen.container).toMatchSnapshot();
+    expect(view.container).toMatchSnapshot();
   });
 
   it('should match the snapshot when items added to shopping cart', async () => {
@@ -47,8 +47,8 @@ describe('#MainAppBar', () => {
       },
     });
 
-    const screen = render(<TestComponent store={store} />);
+    const view = render(<TestComponent store={store} />);
 
-    expect(screen.container).toMatchSnapshot();
+    expect(view.container).toMatchSnapshot();
   });
 });

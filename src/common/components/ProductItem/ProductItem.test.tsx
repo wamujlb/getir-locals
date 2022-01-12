@@ -26,14 +26,14 @@ describe('#ProductItem', () => {
   const onAddToCartFn = jest.fn();
   const onRemoveFromCartFn = jest.fn();
 
-  afterAll(() => {
+  afterEach(() => {
     onAddToCartFn.mockClear();
     onRemoveFromCartFn.mockClear();
     cleanup();
   });
 
   it('should match the snapshot when product not added to the cart', async () => {
-    const screen = render(
+    const view = render(
       <TestComponent
         onAddToCart={onAddToCartFn}
         onRemoveFromCart={onRemoveFromCartFn}
@@ -41,11 +41,11 @@ describe('#ProductItem', () => {
       />
     );
 
-    expect(screen.container).toMatchSnapshot();
+    expect(view.container).toMatchSnapshot();
   });
 
   it('should match the snapshot when product is added to the cart', async () => {
-    const screen = render(
+    const view = render(
       <TestComponent
         onAddToCart={onAddToCartFn}
         onRemoveFromCart={onRemoveFromCartFn}
@@ -54,11 +54,11 @@ describe('#ProductItem', () => {
       />
     );
 
-    expect(screen.container).toMatchSnapshot();
+    expect(view.container).toMatchSnapshot();
   });
 
   it('should call expected functions when depending on addedToCart prop', async () => {
-    const screen = render(
+    const view = render(
       <TestComponent
         onAddToCart={onAddToCartFn}
         onRemoveFromCart={onRemoveFromCartFn}
@@ -66,11 +66,11 @@ describe('#ProductItem', () => {
       />
     );
 
-    userEvent.click(screen.getByText('Add'));
+    userEvent.click(view.getByText('Add'));
 
     expect(onAddToCartFn).toHaveBeenCalled();
 
-    screen.rerender(
+    view.rerender(
       <TestComponent
         addedToCart
         onAddToCart={onAddToCartFn}
@@ -79,7 +79,7 @@ describe('#ProductItem', () => {
       />
     );
 
-    userEvent.click(screen.getByText('Remove'));
+    userEvent.click(view.getByText('Remove'));
 
     expect(onRemoveFromCartFn).toHaveBeenCalled();
   });

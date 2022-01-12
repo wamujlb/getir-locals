@@ -25,6 +25,8 @@ module.exports = {
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': ['error'],
         '@typescript-eslint/no-unused-vars': 'off',
+        'testing-library/prefer-screen-queries': 'off',
+        'jest/no-mocks-import': 'off',
         'react/require-default-props': [
           'off',
           { forbidDefaultForRequired: false, ignoreFunctionalComponents: true },
