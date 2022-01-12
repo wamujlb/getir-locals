@@ -12,7 +12,7 @@ import {
   selectShoppingCartItems,
   selectShoppingCartItemsList,
   selectShoppingCartTotalPrice,
-} from '../shoppingCart.slice';
+} from './shoppingCart.slice';
 
 describe('#shoppingCartSlice', () => {
   describe('#actions', () => {

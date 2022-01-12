@@ -1,0 +1,82 @@
+<Meta title="Intro/Tests" />
+
+# Overview
+
+There are four types of tests in the app:
+
+- *Static*: Catch typos and type errors in the code. Typecript & Eslint cover this part;
+- *Unit*: Make sure that every isolated part of the APP, e.g. hooks, components, utility functions works as expected;
+- *Integration*: Verify that several components, services when they used together work properly;
+- *End to End*: Testing a real user behavior in the browser. (Not implemented)
+
+More explanation and examples regarding writing every type of test are covered further.
+
+
+### Unit tests
+
+Every component, utility function, hook, etc in the project should have unit tests. 
+Dummy components can be tested using snapshots.
+
+#### Example of component snapshot test:
+```
+it('should match the snapshot when product not added to the cart', async () => {
+  const view = render(
+    <TestComponent
+      {...data}
+      onAddToCart={onAddToCartFn}
+      onRemoveFromCart={onRemoveFromCartFn}
+    />
+  );
+
+  expect(view.container).toMatchSnapshot();
+});
+```
+
+#### Example of component behavior test:
+```
+it('should call expected functions when depending on addedToCart prop', async () => {
+  const view = render(
+    <TestComponent
+      onAddToCart={onAddToCartFn}
+      onRemoveFromCart={onRemoveFromCartFn}
+      {...data}
+    />
+  );
+
+  userEvent.click(view.getByText('Add'));
+
+  expect(onAddToCartFn).toHaveBeenCalled();
+
+  view.rerender(
+    <TestComponent
+      addedToCart
+      onAddToCart={onAddToCartFn}
+      onRemoveFromCart={onRemoveFromCartFn}
+      {...data}
+    />
+  );
+
+  userEvent.click(view.getByText('Remove'));
+
+  expect(onRemoveFromCartFn).toHaveBeenCalled();
+});
+```
+
+### Integration tests
+
+When several components or functions used together, e.g. fetching and showing some data from API, updatig APP state, etc, 
+we need to write Integration tests.
+
+#### Example of integration test for shopping cart feature:
+```
+it('should remove the item from the shopping cart when the count becomes 0', () => {
+  const view = render(<TestComponent store={store} />);
+
+  expect(view.queryByRole('spinbutton')).toHaveValue(1);
+
+  userEvent.click(view.getByRole('button', { name: 'Decrease count' }));
+
+  expect(view.queryByRole('spinbutton')).not.toBeInTheDocument();
+});
+```
+

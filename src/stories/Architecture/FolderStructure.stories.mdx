@@ -1,0 +1,36 @@
+import folderStructure from '../assets/folderStructure.png';
+import componentStructure from '../assets/componentStructure.png';
+import featureStructure from '../assets/featureStructure.png';
+
+<Meta title="Architecture/Folder structure" />
+
+# Folder structure
+
+The main project folder is `/src`. 
+
+<img src={folderStructure} title="Folder structure" alt="Folder structure" />
+
+#### Let's start:
+
+1. *api*: This folder contains all API related calls, models, interfaces, etc.
+2. *App*: Folder has App.tsx component which renders the whole APP.
+3. *common*:
+    - *components*: All Presentational components.
+    - *hooks*: Some generic hooks, e.g. usePrice, useScroll, etc.
+    - *utils*: Utility functions.
+4. *features*: All Stateful Components are here.
+5. *routes*: APP routes (pages).
+6. *store*: APP state
+    - *ducks*: State slices.
+    - *sagas*: Redux sagas.
+    - ... and other store related files.
+6. *stories*: Our documentation.
+7. *theme*: Theme modification and overrides.
+
+#### Component folder structure:
+
+<img src={componentStructure} title="Component structure" alt="Component structure" />
+
+#### More complex component example:
+
+<img src={featureStructure} title="Feature structure" alt="Feature structure" />
